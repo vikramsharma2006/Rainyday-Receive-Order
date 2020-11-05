@@ -41,10 +41,27 @@ public class ReceiveOrderServiceImpl implements ReceiveOrderService {
 		producttea.setCategory("beverage");
 		producttea.setCompanyname("demo1");
 		producttea.setEstimatedprice(100);
-		producttea.setId(1l);
+		producttea.setId(2l);
 		producttea.setName("tea");
+		
+		
+		Product productcoldCoffee=new Product();
+		productcoldCoffee.setCategory("beverage");
+		productcoldCoffee.setCompanyname("demo1");
+		productcoldCoffee.setEstimatedprice(100);
+		productcoldCoffee.setId(3l);
+		productcoldCoffee.setName("coldCoffee");
+		
+		Product producthottea=new Product();
+		producthottea.setCategory("beverage");
+		producthottea.setCompanyname("demo1");
+		producthottea.setEstimatedprice(100);
+		producthottea.setId(4l);
+		producthottea.setName("hottea");
 		productList.add(productcoffee);
 		productList.add(producttea);
+		productList.add(productcoldCoffee);
+		productList.add(producthottea);
 		
 		return productList;
 	}
