@@ -1,5 +1,7 @@
 package com.rainyday.receiveorder.service;
 import java.util.List;
+
+import com.rainyday.receiveorder.model.OrderRequestList;
 import com.rainyday.receiveorder.model.Product;
 
 public interface ReceiveOrderService {
@@ -8,4 +10,6 @@ public interface ReceiveOrderService {
     Product findByProduct(String product);
     
     List<Product> getAllProduct();
+
+    List<Product> order(OrderRequestList orderRequestList);
 }

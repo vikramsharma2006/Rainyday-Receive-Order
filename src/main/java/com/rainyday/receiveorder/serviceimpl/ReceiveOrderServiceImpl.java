@@ -1,4 +1,4 @@
-package com.rainyday.receiveorder.service;
+package com.rainyday.receiveorder.serviceimpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.rainyday.receiveorder.model.OrderRequestList;
 import com.rainyday.receiveorder.model.Product;
 import com.rainyday.receiveorder.repository.ReceiveOrderRepository;
+import com.rainyday.receiveorder.service.ReceiveOrderService;
 
 @Service
 public class ReceiveOrderServiceImpl implements ReceiveOrderService {
@@ -65,5 +67,22 @@ public class ReceiveOrderServiceImpl implements ReceiveOrderService {
 		
 		return productList;
 	}
+
+	@Override
+	public List<Product> order(OrderRequestList orderRequestList) {
+		
+		List<Product> orderedProductList = new ArrayList<>();
+		orderRequestList.getOrderRequest().forEach(orderRequest -> {
+			getAllProduct().stream().forEach(product -> {
+				if (orderRequest.getProductId().equals(product.getId())) {
+					orderedProductList.add(product);
+				}
+			});
+
+		});
+		return orderedProductList;
+	}
+
+	
 
 }

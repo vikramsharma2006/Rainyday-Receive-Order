@@ -1,5 +1,7 @@
 package com.rainyday.receiveorder.controller;
 import java.util.List;
+
+import com.rainyday.receiveorder.model.OrderRequestList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,24 +10,30 @@ import com.rainyday.receiveorder.model.Product;
 import com.rainyday.receiveorder.service.ReceiveOrderService;
 
 @RestController
+
 @RequestMapping(value = "/receviceorder")
 public class ReceiveOrderController {
-   
-	@Autowired
+
+    @Autowired
     private ReceiveOrderService receiveOrderService;
-	
-	 private static final Logger logger = LoggerFactory.getLogger(ReceiveOrderController.class);
-	 
+
+    private static final Logger logger = LoggerFactory.getLogger(ReceiveOrderController.class);
+
     @GetMapping("/products")
-    public List<?> registration() {
-        
-    	logger.info(String.format("get all product in the system"));
-    	List<Product>productList=receiveOrderService.getAllProduct();
-    	
+    public List<?> getProduct() {
+        logger.info(String.format("get all product in the system"));
+        List<Product>productList=receiveOrderService.getAllProduct();
         if (productList.size()<1) {
             return productList;
         }
         return productList;
     }
+
+    @PostMapping(value = "/order")
+    public List<Product> placeOrder(@RequestBody OrderRequestList orderRequestList) {
+        return receiveOrderService.order(orderRequestList);
+    }
+
+
 
 }
