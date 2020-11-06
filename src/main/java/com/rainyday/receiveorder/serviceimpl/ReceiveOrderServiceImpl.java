@@ -31,39 +31,91 @@ public class ReceiveOrderServiceImpl implements ReceiveOrderService {
 
 	@Override
 	public List<Product> getAllProduct() {
+		
 		List<Product> productList=new ArrayList<>();
 		Product productcoffee=new Product();
 		productcoffee.setCategory("beverage");
-		productcoffee.setCompanyname("demo1");
-		productcoffee.setEstimatedprice(100);
+		productcoffee.setCompanyName("Company1");
+		productcoffee.setEstimatedPrice(100);
 		productcoffee.setId(1l);
 		productcoffee.setName("coffee");
+		productList.add(productcoffee);
 		
 		Product producttea=new Product();
 		producttea.setCategory("beverage");
-		producttea.setCompanyname("demo1");
-		producttea.setEstimatedprice(100);
+		producttea.setCompanyName("Company2");
+		producttea.setEstimatedPrice(100);
 		producttea.setId(2l);
 		producttea.setName("tea");
+		productList.add(producttea);
 		
 		
 		Product productcoldCoffee=new Product();
-		productcoldCoffee.setCategory("beverage");
-		productcoldCoffee.setCompanyname("demo1");
-		productcoldCoffee.setEstimatedprice(100);
+		productcoldCoffee.setCategory("dairy");
+		productcoldCoffee.setCompanyName("Company3");
+		productcoldCoffee.setEstimatedPrice(200);
 		productcoldCoffee.setId(3l);
-		productcoldCoffee.setName("coldCoffee");
+		productcoldCoffee.setName("Baking cake");
+		productList.add(productcoldCoffee);
 		
 		Product producthottea=new Product();
-		producthottea.setCategory("beverage");
-		producthottea.setCompanyname("demo1");
-		producthottea.setEstimatedprice(100);
+		producthottea.setCategory("fruit");
+		producthottea.setCompanyName("Company4");
+		producthottea.setEstimatedPrice(210);
 		producthottea.setId(4l);
-		producthottea.setName("hottea");
-		productList.add(productcoffee);
-		productList.add(producttea);
-		productList.add(productcoldCoffee);
+		producthottea.setName("Fresh strawberry");
 		productList.add(producthottea);
+		
+		Product productbread=new Product();
+		productbread.setCategory("bakery");
+		productbread.setCompanyName("Company5");
+		productbread.setEstimatedPrice(100);
+		productbread.setId(5l);
+		productbread.setName("Homemade bread");
+		productList.add(productbread);
+		
+		Product productOranges=new Product();
+		productOranges.setCategory("fruit");
+		productOranges.setCompanyName("Company6");
+		productOranges.setEstimatedPrice(100);
+		productOranges.setId(6l);
+		productOranges.setName("Oranges");
+		productList.add(productOranges);
+		
+		
+		Product productHoney=new Product();
+		productHoney.setCategory("bakery");
+		productHoney.setCompanyName("Company7");
+		productHoney.setEstimatedPrice(20);
+		productHoney.setId(7l);
+		productHoney.setName("Honey");
+		productList.add(productHoney);
+		
+		Product productYogurt=new Product();
+		productYogurt.setCategory("dairy");
+		productYogurt.setCompanyName("Company8");
+		productYogurt.setEstimatedPrice(210);
+		productYogurt.setId(8l);
+		productYogurt.setName("Yogurt");
+		productList.add(productYogurt);
+		
+		
+		Product productCorn=new Product();
+		productCorn.setCategory("vegetable");
+		productCorn.setCompanyName("Company9");
+		productCorn.setEstimatedPrice(20);
+		productCorn.setId(9l);
+		productCorn.setName("Corn");
+		productList.add(productCorn);
+		
+		Product productTomatoes=new Product();
+		productTomatoes.setCategory("vegetable");
+		productTomatoes.setCompanyName("Company10");
+		productTomatoes.setEstimatedPrice(210);
+		productTomatoes.setId(10l);
+		productTomatoes.setName("Tomatoes");
+		productList.add(productTomatoes);
+		
 		
 		return productList;
 	}

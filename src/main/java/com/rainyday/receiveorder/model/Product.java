@@ -13,8 +13,8 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; 
     public String name;
-    public String companyname;
-    public int estimatedprice; 
+    public String companyName;
+    public int estimatedPrice; 
     public String category;
 	public Long getId() {
 		return id;
@@ -28,17 +28,17 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getCompanyname() {
-		return companyname;
+	public String getCompanyName() {
+		return companyName;
 	}
-	public void setCompanyname(String companyname) {
-		this.companyname = companyname;
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
-	public int getEstimatedprice() {
-		return estimatedprice;
+	public int getEstimatedPrice() {
+		return estimatedPrice;
 	}
-	public void setEstimatedprice(int estimatedprice) {
-		this.estimatedprice = estimatedprice;
+	public void setEstimatedPrice(int estimatedPrice) {
+		this.estimatedPrice = estimatedPrice;
 	}
 	public String getCategory() {
 		return category;
@@ -48,11 +48,9 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", companyname=" + companyname + ", estimatedprice="
-				+ estimatedprice + ", category=" + category + "]";
+		return "Product [id=" + id + ", name=" + name + ", companyName=" + companyName + ", estimatedPrice="
+				+ estimatedPrice + ", category=" + category + "]";
 	}
-
-
-
+	
 }
 

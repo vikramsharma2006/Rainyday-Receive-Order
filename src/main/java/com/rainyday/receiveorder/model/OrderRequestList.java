@@ -8,13 +8,12 @@ import java.util.List;
 public class OrderRequestList {
     List<OrderRequest> orderRequest;
 
-	public List<OrderRequest> getOrderRequest() {
-		return orderRequest;
-	}
-
-	public void setOrderRequest(List<OrderRequest> orderRequest) {
-		this.orderRequest = orderRequest;
-	}
+	/*
+	 * public List<OrderRequest> getOrderRequest() { return orderRequest; }
+	 * 
+	 * public void setOrderRequest(List<OrderRequest> orderRequest) {
+	 * this.orderRequest = orderRequest; }
+	 */
     
     
 }
