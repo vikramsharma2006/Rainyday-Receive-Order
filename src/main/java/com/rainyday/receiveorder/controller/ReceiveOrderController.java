@@ -20,7 +20,8 @@ public class ReceiveOrderController {
 
     private static final Logger logger = LoggerFactory.getLogger(ReceiveOrderController.class);
 
-    @GetMapping("/products")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@GetMapping("/products")
     public Response getProduct() {
         logger.info(String.format("get all product in the system"));
         List<Product>productList=receiveOrderService.getAllProduct();

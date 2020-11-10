@@ -17,6 +17,9 @@ public class ReceiveOrderServiceImpl implements ReceiveOrderService {
 	@Autowired
     private ReceiveOrderRepository receiveOrderRepository;
 	
+	@Autowired
+	private Producer producer;
+	
 	@Override
 	public void save(Product product) {
 		// TODO Auto-generated method stub
@@ -122,7 +125,7 @@ public class ReceiveOrderServiceImpl implements ReceiveOrderService {
 
 	@Override
 	public List<Product> order(OrderRequestList orderRequestList) {
-		
+		String  response=producer.sendMessage(orderRequestList);
 		List<Product> orderedProductList = new ArrayList<>();
 		orderRequestList.getOrderRequest().forEach(orderRequest -> {
 			getAllProduct().stream().forEach(product -> {
